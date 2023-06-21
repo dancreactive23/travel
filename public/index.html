@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <p>Travel the world!!!</p>
-    <div class="w-64 h-64 bg-purple-200"></div>
+    <nav></nav>
+    <div id="tab_bar"></div>
+    <section class="w-full h-screen">
+        <div id="home">
+            <div class="w-full h-3/4">
+                <div class="w-full h-full flex flex-col items-center py-4  space-y-96 mt-16 absolute">
+                    <div class="text-center">
+                        <img class="absolute mt-1.5" src="./svg/search_icon.svg" alt="search">
+                        <input class="outline-none p-2 rounded-full text-center shadow-lg" type="search" placeholder="    Go to italy anywhere" name="" id="">
+                    </div>
+                    <button class="bg-green_blue text-xl text-white px-4 py-2 rounded-full text-center font-semibold shadow-sm">Explore more</button>
+                </div>
+                <div class="w-full h-full">
+                    <img src="./img/Italy.png" alt="home_img">
+                </div>
+            </div>
+        </div>
+        <div id="recommended"></div>
+        <div id="trending_stays"></div>
+    </section>
+    <footer></footer>
 </body>
 </html>
