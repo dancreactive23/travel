@@ -10,3 +10,7 @@
 .info_card{
     @apply w-52 h-auto mx-20 mt-4 p-3  bg-white text-left text-gray_900;
 }
+
+.icon-animation{
+    @apply transition hover:fill-current hover:text-gray_700 duration-300 ease-in-out;
+}

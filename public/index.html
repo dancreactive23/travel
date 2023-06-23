@@ -11,8 +11,12 @@
 </head>
 <body class="font-Montserrat">
     <nav></nav>
-    <div id="tab_bar"></div>
-    <section class="w-full h-screen">
+    <button class="fixed right-5 top-7 w-14 h-8 bg-white drop-shadow-md flex justify-center items-center rounded-3xl">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96175 11.5827 7.48895 10.8106 6.33919 9.66085C5.18944 8.5111 4.41734 7.0383 4.12574 5.43866C3.83415 3.83903 4.03691 2.18852 4.70701 0.707031C3.52758 1.24004 2.49505 2.05123 1.69802 3.07099C0.900987 4.09075 0.363244 5.28865 0.130924 6.56192C-0.101395 7.83518 -0.0213565 9.1458 0.364174 10.3813C0.749705 11.6169 1.42922 12.7404 2.34442 13.6556C3.25961 14.5708 4.38318 15.2503 5.61871 15.6359C6.85424 16.0214 8.16486 16.1014 9.43813 15.8691C10.7114 15.6368 11.9093 15.0991 12.9291 14.302C13.9488 13.505 14.76 12.4725 15.293 11.293Z" fill="#336965"/>
+        </svg>
+    </button>
+    <section class="w-full h-auto">
         <div id="home">
             <div class="w-full h-3/4">
                 <div class="w-full h-full flex flex-col items-center py-4  space-y-96 mt-16 absolute">
@@ -99,7 +103,72 @@
                 </div>
             </div>
         </div>
+        <div class="w-full h-auto px-6 pb-12" id="faq">
+            <p class="text-3xl mb-6 font-semibold text-green_blue">FAQs</p>
+            <div class="flex flex-col items-center justify-center gap-y-3">
+                <div>
+                    <p class="text-xl font-medium text-green_blue">Payment Methods</p>
+                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                </div>
+                <div>
+                    <p class="text-xl font-medium text-green_blue">Cancellation policy</p>
+                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                </div>
+                <div>
+                    <p class="text-xl font-medium text-green_blue">Long Stays</p>
+                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                </div>
+                <div>
+                    <p class="text-xl font-medium text-green_blue">Guarantee information</p>
+                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                </div>
+                <div>
+                    <p class="text-xl font-medium text-green_blue">Additional Services</p>
+                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer></footer>
+    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-4 pb-8">
+        <div class="space-y-3">
+            <p class="text-lg font-semibold">About us</p>
+            <p class="text-sm">Jobs</p>
+            <p class="text-sm">Investors</p>
+            <p class="text-sm">Privacy Policy</p>
+            <p class="text-sm">Terms and conditions</p>
+            <p class="text-sm">Assistance</p>
+            <p class="text-sm">Follow us</p>
+        </div>
+        <div class="flex w-full justify-center gap-x-2.5 mt-3.5 mb-20">
+            <img src="./svg/twitter 1.svg" alt="twitter">
+            <img src="./svg/instagram 1.png" alt="instagram">
+        </div>
+    </footer>
+    <div class="w-full h-16 bg-green_blue border-t flex justify-center items-center gap-x-9 fixed left-0 bottom-0" id="tab_bar">
+        <a href="#home">
+            <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="icon-animation" d="M15.0159 1.0385C14.7669 0.754637 14.4034 0.588779 14.0189 0.583504C13.6344 0.578228 13.2662 0.734049 13.009 1.01096L1.00896 13.9276C0.656721 14.3068 0.567802 14.8512 0.782022 15.3172C0.996242 15.7832 1.47347 16.0834 2.00002 16.0834H4.66669V23.8334C4.66669 24.5467 5.26364 25.125 6.00002 25.125H11.3334V18.6667H16.6667V25.125H22C22.7364 25.125 23.3334 24.5467 23.3334 23.8334V16.0834H25.3334C25.8531 16.0834 26.3254 15.7908 26.5436 15.3339C26.7617 14.8769 26.6859 14.3388 26.3493 13.9552L15.0159 1.0385Z" fill="#F2F2F2"/>
+            </svg>
+        </a>
+        <a href="#trending_stays">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M12.0833 3.625C7.41192 3.625 3.625 7.41192 3.625 12.0833C3.625 16.7547 7.41192 20.5417 12.0833 20.5417C13.9832 20.5417 15.7368 19.9153 17.1489 18.8577L22.104 23.8128C22.5759 24.2847 23.341 24.2847 23.8128 23.8128C24.2847 23.341 24.2847 22.5759 23.8128 22.104L18.8577 17.1489C19.9153 15.7368 20.5417 13.9832 20.5417 12.0833C20.5417 7.41192 16.7547 3.625 12.0833 3.625ZM6.04167 12.0833C6.04167 8.74661 8.74661 6.04167 12.0833 6.04167C15.4201 6.04167 18.125 8.74661 18.125 12.0833C18.125 15.4201 15.4201 18.125 12.0833 18.125C8.74661 18.125 6.04167 15.4201 6.04167 12.0833Z" fill="#D1D5DB"/>
+            </svg>
+                
+        </a>
+        <a href="#recommended">
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="31" height="31" fill="#336965"/>
+                <path class="icon-animation" d="M8.88589 5.15968C11.6963 4.45691 13.5415 5.33621 14.6651 6.45976C14.7875 6.58214 14.9006 6.70668 15.0051 6.83141C15.1278 6.9779 15.3091 7.06253 15.5002 7.06253C15.6913 7.06253 15.8726 6.9779 15.9953 6.8314C16.0998 6.70667 16.2129 6.58213 16.3353 6.45976C17.4589 5.33617 19.3043 4.45693 22.1153 5.15967C24.9229 5.8616 27.0419 7.97272 27.7491 10.625C28.461 13.2952 27.7249 16.4329 24.9982 19.1596C21.9813 22.1765 19.4061 24.753 17.7854 26.3747C16.5244 27.6365 14.4827 27.6371 13.2211 26.3757L6.00388 19.1596C3.27608 16.4322 2.53997 13.2945 3.25217 10.6244C3.9596 7.97228 6.07894 5.8616 8.88589 5.15968Z" fill="#F2F2F2"/>
+            </svg>
+        </a>
+        <a href="#!">
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="31" height="31" fill="#336965"/>
+                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M5.78225 19.6464C7.4799 17.2799 10.4865 15.4999 15.4999 15.4999C20.5132 15.4999 23.5199 17.2799 25.2175 19.6464C26.8582 21.9336 27.1196 24.5552 27.1248 26.0058C27.13 27.4645 25.9071 28.4166 24.6533 28.4166H6.34642C5.09262 28.4166 3.86971 27.4645 3.87496 26.0058C3.88017 24.5552 4.1415 21.9336 5.78225 19.6464Z" fill="#F2F2F2"/>
+                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12.9166C18.3535 12.9166 20.6667 10.6034 20.6667 7.74992C20.6667 4.89645 18.3535 2.58325 15.5 2.58325C12.6465 2.58325 10.3333 4.89645 10.3333 7.74992C10.3333 10.6034 12.6465 12.9166 15.5 12.9166Z" fill="#F2F2F2"/>
+            </svg>
+        </a>
+    </div>
 </body>
 </html>
