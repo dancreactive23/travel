@@ -2,7 +2,7 @@
 import colors from 'tailwindcss/colors';
 
 module.exports = {
-  content: ["../index.html","./src/**/*.{html,js}"],
+  content: ["./public/index.html","./src/**/*.{html,js}"],
   theme: {
     colors:{
       ...colors,

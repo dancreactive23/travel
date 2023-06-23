@@ -4,5 +4,9 @@
 
 
 .Card{
-    @apply w-48 h-64 shadow-md rounded-lg flex-none transition hover:-translate-y-4 hover:shadow-xl ease-in-out 
+    @apply w-48 h-64 shadow-md rounded-lg flex-none transition hover:-translate-y-4 hover:shadow-xl ease-in-out; 
+}
+
+.info_card{
+    @apply w-52 h-auto mx-20 mt-4 p-3  bg-white text-left text-gray_900;
 }
