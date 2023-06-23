@@ -2,7 +2,7 @@
 import colors from 'tailwindcss/colors';
 
 module.exports = {
-  content: ["./public/index.html","./src/**/*.{html,js}"],
+  content: ["../index.html","./src/**/*.{html,js}"],
   theme: {
     colors:{
       ...colors,
@@ -19,20 +19,20 @@ module.exports = {
     },
     extend: {
       backgroundImage:{
-        'sanFrancisco':"url('./public/img/sanFrancisco.jpg')",
-        'sanFrancisco-Desktop':"url('./public/img/sanFranciscoDesktop.jpg')",
-        'chicago':"url('./public/img/chicago.jpg')",
-        'bali':"url('./public/img/bali.jpg')",
-        'europe':"url('./public/img/europe.jpg')",
-        'iceland':"url('./public/img/iceland.jpg')",
-        'LA':"url('./public/img/LA.jpg')",
-        'miami':"url('./public/img/miami.jpg')",
-        'newyork':"url('./public/img/new_york.jpg')",
-        'norway':"url('./public/img/norway.jpg')",
-        'seattle':"url('./public/img/seattle.jpg')",
-        'switzerland':"url('./public/img/switzerland.jpg')",
-        'sydney':"url('./public/img/sydney.jpg')",
-        'yosemite':"url('./public/img/yosemite.jpg')",
+        'sanFrancisco':"url('../img/sanFrancisco.jpg')",
+        'sanFrancisco-Desktop':"url('../img/sanFranciscoDesktop.jpg')",
+        'chicago':"url('../img/chicago.jpg')",
+        'bali':"url('../img/bali.jpg')",
+        'europe':"url('../img/europe.jpg')",
+        'iceland':"url('../img/iceland.jpg')",
+        'LA':"url('../img/LA.jpg')",
+        'miami':"url('../img/miami.jpg')",
+        'newyork':"url('../img/new_york.jpg')",
+        'norway':"url('../img/norway.jpg')",
+        'seattle':"url('../img/seattle.jpg')",
+        'switzerland':"url('../img/switzerland.jpg')",
+        'sydney':"url('../img/sydney.jpg')",
+        'yosemite':"url('../img/yosemite.jpg')",
       },
       backgroundColor:{
         gray_900:colors.gray[900],

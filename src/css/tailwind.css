@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.Card{
+    @apply w-48 h-64 shadow-md rounded-lg flex-none transition hover:-translate-y-4 hover:shadow-xl ease-in-out 
+}
