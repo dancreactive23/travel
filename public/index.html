@@ -11,7 +11,7 @@
 </head>
 <body class="font-Montserrat">
     <nav></nav>
-    <button class="fixed right-5 top-7 w-14 h-8 bg-white drop-shadow-md flex justify-center items-center rounded-3xl">
+    <button class="fixed right-5 top-7 w-14 h-8 bg-white drop-shadow-md flex justify-center items-center rounded-3xl lg:hidden">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96175 11.5827 7.48895 10.8106 6.33919 9.66085C5.18944 8.5111 4.41734 7.0383 4.12574 5.43866C3.83415 3.83903 4.03691 2.18852 4.70701 0.707031C3.52758 1.24004 2.49505 2.05123 1.69802 3.07099C0.900987 4.09075 0.363244 5.28865 0.130924 6.56192C-0.101395 7.83518 -0.0213565 9.1458 0.364174 10.3813C0.749705 11.6169 1.42922 12.7404 2.34442 13.6556C3.25961 14.5708 4.38318 15.2503 5.61871 15.6359C6.85424 16.0214 8.16486 16.1014 9.43813 15.8691C10.7114 15.6368 11.9093 15.0991 12.9291 14.302C13.9488 13.505 14.76 12.4725 15.293 11.293Z" fill="#336965"/>
         </svg>
@@ -19,24 +19,26 @@
     <section class="w-full h-auto">
         <div id="home">
             <div class="w-full h-3/4">
-                <div class="w-full h-full flex flex-col items-center py-4  space-y-96 mt-16 absolute">
-                    <div class="text-center w-full">
+                <div class="w-full h-full flex flex-col items-center py-4  space-y-96 mt-16 absolute lg:items-start lg:space-y-6 lg:w-96 lg:h-auto lg:p-3 lg:border-2 lg:border-green_blue lg:rounded-md lg:box-content lg:ml-6 lg:mt-80">
+                    <div class="text-center w-full lg:hidden">
                         <input class="outline-none p-2 rounded-full text-center shadow-lg transition duration-300 
                         focus-within:shadow-sm focus:ring-2 focus:ring-green_blue focus:w-11/12" type="search" placeholder="    Go anywhere" name="" id="">
                     </div>
+                    <p class="max-lg:hidden lg:text-4xl lg:font-bold lg:text-green_blue ">Explore the world with us</p>
                     <button class="bg-white text-lg text-green_blue w-48 p-3 rounded-full text-center font-semibold 
-                    shadow-sm transition durantion-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-green_blue hover:text-white">
+                    shadow-sm transition durantion-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-green_blue hover:text-white lg:bg-green_blue lg:bg-opacity-90 lg:text-white">
                         Explore more
                     </button>
                 </div>
-                <div class="w-full h-full">
-                    <img src="./img/Italy.png" alt="home_img">
+                <div class="w-full h-full lg:h-fit">
+                    <img class="lg:hidden" src="./img/Italy.png" alt="home_img">
+                    <img class="max-lg:hidden " src="./img/Italy-desktop.png" alt="italy_desktop">
                 </div>
             </div>
         </div>
-            <div class="p-6" id="recommended">
+        <div class="p-6 mt-12" id="recommended">
                 <p class="text-3xl font-semibold text-green_blue">Recommendations</p>
-                <div class="mt-6 w-auto h-72 flex items-center space-x-6 overflow-x-auto overscroll-x-contain overflow-y-hidden">
+                <div class="mt-6 w-auto h-72 flex items-center space-x-6 overflow-x-auto overscroll-x-contain overflow-y-hidden ">
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover bg-no-repeat"></div>
                         <div class="bg-gray_900 w-ful h-2/5 rounded-b-lg text-white p-3">
@@ -72,30 +74,45 @@
                             <p class="text-md mt-1">Welcome to Seattle</p>
                         </div>
                     </div>
+                    <div class="Card">
+                        <div class="w-full h-3/5 rounded-t-lg bg-iceland bg-cover bg-no-repeat"></div>
+                        <div class="bg-azul w-ful h-2/5 rounded-b-lg text-white p-3">
+                            <p class="text-xl font-bold">Iceland</p>
+                            <p class="text-md mt-1">A frozen world</p>
+                        </div>
+                    </div>
+                    <div class="Card">
+                        <div class="w-full h-3/5 rounded-t-lg bg-switzerland bg-cover bg-no-repeat"></div>
+                        <div class="bg-gray_900 w-ful h-2/5 rounded-b-lg text-white p-3">
+                            <p class="text-xl font-bold">Switzerland</p>
+                            <p class="text-md mt-1">An outstanding destination</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        <div class="px-6 pb-6 w-full h-auto" id="trending_stays">
+            </div>
+        <div class="px-6 pb-6 mt-12 w-full h-auto" id="trending_stays">
             <p class="text-3xl mb-6 font-semibold text-green_blue">Trending Stays</p>
-            <div class="flex flex-col items-center gap-y-10">
-                <div class="w-full h-96 bg-chicago bg-cover pt-3 bg-no-repeat rounded-xl">
-                    <div class="info_card">
+            <div class="grid grid-cols-1 grid-rows-1 gap-y-10  lg:grid-cols-5 lg:grid-rows-3 lg:gap-4 lg:grid-flow-col">
+                <div class="w-full h-96 bg-chicago bg-center bg-cover pt-3 bg-no-repeat rounded-xl lg:col-span-full lg:row-span-1 lg:flex lg:items-start lg:justify-center">
+                    <div class="info_card ">
                         <p class="text-3xl pb-2 font-semibold">Chicago</p>
                         <p class="text-lg font-medium">2 rooms, bathroom and kitchen.</p>
                     </div>
                 </div>
-                <div class="w-full h-96 bg-LA bg-cover pt-3 bg-no-repeat rounded-xl">
+                <div class="w-full h-96 bg-LA bg-cover bg-center pt-3 bg-no-repeat rounded-xl lg:col-span-2 lg:row-start-2 lg:row-end-4 lg:h-auto lg:flex lg:items-end lg:justify-center lg:pb-3">
                     <div class="info_card">
                         <p class="text-3xl pb-2 font-semibold">Los Angeles</p>
                         <p class="text-lg font-medium">4 rooms,3 bathroom, kitchen and private pool.</p>
                     </div>
                 </div>
-                <div class="w-full h-96 bg-miami bg-cover pt-3 bg-no-repeat rounded-xl">
+                <div class="w-full h-96 bg-miami bg-cover bg-center pt-3 bg-no-repeat rounded-xl lg:col-span-3 lg:row-span-1 lg:flex lg:items-start lg:justify-start">
                     <div class="info_card">
                         <p class="text-3xl pb-2 font-semibold">Miami</p>
                         <p class="text-lg font-medium">4 rooms,2 bathroom, kitchen and amazing view.</p>
                     </div>
                 </div>
-                <div class="w-full h-96 bg-bali bg-cover pt-3 bg-no-repeat rounded-xl">
+                <div class="w-full h-96 bg-bali bg-cover bg-center pt-3 bg-no-repeat rounded-xl lg:col-span-3 lg:row-span-1 lg:flex lg:items-start lg:justify-end">
                     <div class="info_card">
                         <p class="text-3xl pb-2 font-semibold">Bali</p>
                         <p class="text-lg font-medium">4 rooms,2 bathroom,kitchen and private pool.</p>
@@ -103,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-auto px-6 pb-12" id="faq">
+        <div class="w-full h-auto px-6 mt-12 pb-12" id="faq">
             <p class="text-3xl mb-6 font-semibold text-green_blue">FAQs</p>
             <div class="flex flex-col items-center justify-center gap-y-3">
                 <div>
@@ -129,7 +146,7 @@
             </div>
         </div>
     </section>
-    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-4 pb-8">
+    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-8 pb-8 lg:pt-4 lg:pb-4">
         <div class="space-y-3">
             <p class="text-lg font-semibold">About us</p>
             <p class="text-sm">Jobs</p>
@@ -139,12 +156,12 @@
             <p class="text-sm">Assistance</p>
             <p class="text-sm">Follow us</p>
         </div>
-        <div class="flex w-full justify-center gap-x-2.5 mt-3.5 mb-20">
+        <div class="flex w-full justify-center gap-x-2.5 mt-3.5 mb-20 lg:mb-2">
             <img src="./svg/twitter 1.svg" alt="twitter">
             <img src="./svg/instagram 1.png" alt="instagram">
         </div>
     </footer>
-    <div class="w-full h-16 bg-green_blue border-t flex justify-center items-center gap-x-9 fixed left-0 bottom-0" id="tab_bar">
+    <div class="w-full h-16 bg-green_blue border-t flex justify-center items-center gap-x-9 fixed left-0 bottom-0 lg:hidden" id="tab_bar">
         <a href="#home">
             <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="icon-animation" d="M15.0159 1.0385C14.7669 0.754637 14.4034 0.588779 14.0189 0.583504C13.6344 0.578228 13.2662 0.734049 13.009 1.01096L1.00896 13.9276C0.656721 14.3068 0.567802 14.8512 0.782022 15.3172C0.996242 15.7832 1.47347 16.0834 2.00002 16.0834H4.66669V23.8334C4.66669 24.5467 5.26364 25.125 6.00002 25.125H11.3334V18.6667H16.6667V25.125H22C22.7364 25.125 23.3334 24.5467 23.3334 23.8334V16.0834H25.3334C25.8531 16.0834 26.3254 15.7908 26.5436 15.3339C26.7617 14.8769 26.6859 14.3388 26.3493 13.9552L15.0159 1.0385Z" fill="#F2F2F2"/>

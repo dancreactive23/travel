@@ -33,6 +33,7 @@ module.exports = {
         'switzerland':"url('../img/switzerland.jpg')",
         'sydney':"url('../img/sydney.jpg')",
         'yosemite':"url('../img/yosemite.jpg')",
+        'italy-desktop':"url('../img/italy-desktop.png')"
       },
       backgroundColor:{
         gray_900:colors.gray[900],
