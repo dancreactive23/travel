@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="font-Montserrat">
-    <nav class="w-full h-16 hidden bg-white lg:flex lg:justify-between lg:items-center lg:px-6 lg:fixed lg:border-b lg:border-gray_300 lg:drop-shadow-md lg:z-10">
+<body class="font-Montserrat dark:bg-gray_900">
+    <nav class="w-full h-16 hidden bg-white lg:flex lg:justify-between lg:items-center lg:px-6 lg:fixed lg:border-b lg:border-gray_300 lg:drop-shadow-md lg:z-10 dark:bg-gray_900">
         <div class="w-auto h-auto text-center">
-            <a href="#home"><p class="text-xl font-black text-green_blue">Travel the World</p></a>
+            <a href="#home" class="text-xl font-black text-green_blue dark:text-white">Travel the World</a>
         </div>
         <div class="flex  h-auto justify-center space-x-12">
-            <a href="#recommended" class="text-lg font-bold text-green_blue">Locations</a>
-            <a href="#trending_stays" class="text-lg font-bold text-green_blue">Stays</a>
-            <a href="#faq" class="text-lg font-bold text-green_blue">FAQs</a>
-            <a href="#about" class="text-lg font-bold text-green_blue">About us</a>
+            <a href="#recommended" class="text-lg font-bold text-green_blue dark:text-white ">Locations</a>
+            <a href="#trending_stays" class="text-lg font-bold text-green_blue dark:text-white">Stays</a>
+            <a href="#faq" class="text-lg font-bold text-green_blue dark:text-white">FAQs</a>
+            <a href="#about" class="text-lg font-bold text-green_blue dark:text-white">About us</a>
         </div>
-        <div class="flex w-auto h-auto space-x-7">
+        <div class="flex items-center w-auto h-auto space-x-7">
             <img src="./svg/search_icon.svg" alt="search">
-            <img src="./svg/moon.svg" alt="moon">
+            <button id="dark-desktop">
+                <p class="dark:hidden">
+                    <img src="./svg/moon.svg" alt="moon">
+                </p>
+                <p class="hidden dark:block">
+                    <img src="./svg/light.svg" alt="light">
+                </p>
+            </button>
             <img src="./svg/us.svg" alt="user">
+        </div>
     </nav>
-    <button class="fixed right-5 top-7 w-14 h-8 bg-white drop-shadow-md flex justify-center items-center rounded-3xl lg:hidden">
+    <button class="fixed right-5 top-7 w-14 h-8 bg-white drop-shadow-md flex justify-end dark:justify-normal items-center rounded-3xl lg:hidden" id="dark-sm">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96175 11.5827 7.48895 10.8106 6.33919 9.66085C5.18944 8.5111 4.41734 7.0383 4.12574 5.43866C3.83415 3.83903 4.03691 2.18852 4.70701 0.707031C3.52758 1.24004 2.49505 2.05123 1.69802 3.07099C0.900987 4.09075 0.363244 5.28865 0.130924 6.56192C-0.101395 7.83518 -0.0213565 9.1458 0.364174 10.3813C0.749705 11.6169 1.42922 12.7404 2.34442 13.6556C3.25961 14.5708 4.38318 15.2503 5.61871 15.6359C6.85424 16.0214 8.16486 16.1014 9.43813 15.8691C10.7114 15.6368 11.9093 15.0991 12.9291 14.302C13.9488 13.505 14.76 12.4725 15.293 11.293Z" fill="#336965"/>
+            <path class="dark:hidden " d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96175 11.5827 7.48895 10.8106 6.33919 9.66085C5.18944 8.5111 4.41734 7.0383 4.12574 5.43866C3.83415 3.83903 4.03691 2.18852 4.70701 0.707031C3.52758 1.24004 2.49505 2.05123 1.69802 3.07099C0.900987 4.09075 0.363244 5.28865 0.130924 6.56192C-0.101395 7.83518 -0.0213565 9.1458 0.364174 10.3813C0.749705 11.6169 1.42922 12.7404 2.34442 13.6556C3.25961 14.5708 4.38318 15.2503 5.61871 15.6359C6.85424 16.0214 8.16486 16.1014 9.43813 15.8691C10.7114 15.6368 11.9093 15.0991 12.9291 14.302C13.9488 13.505 14.76 12.4725 15.293 11.293Z" fill="#336965"/>
+        </svg>
+        <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="hidden dark:block dark:text-center" fill-rule="evenodd" clip-rule="evenodd" d="M12.0356 0.515824C12.33 0.608395 12.5872 0.792456 12.7697 1.04124C12.9522 1.29002 13.0507 1.59055 13.0506 1.89912V9.14912H18.8506C19.1159 9.14901 19.3761 9.22164 19.6029 9.35912C19.8297 9.4966 20.0145 9.69366 20.1371 9.92885C20.2597 10.164 20.3154 10.4284 20.2982 10.693C20.2811 10.9577 20.1916 11.2126 20.0396 11.43L9.88964 25.93C9.71299 26.1831 9.4602 26.3732 9.16804 26.4727C8.87588 26.5721 8.55959 26.5758 8.2652 26.4831C7.97082 26.3904 7.71368 26.2062 7.53121 25.9573C7.34874 25.7084 7.25045 25.4078 7.25064 25.0991V17.8491H1.45065C1.18541 17.8492 0.92523 17.7766 0.698411 17.6391C0.471591 17.5016 0.286825 17.3046 0.164219 17.0694C0.0416139 16.8342 -0.0141332 16.5699 0.00304476 16.3052C0.0202227 16.0405 0.109668 15.7856 0.261645 15.5683L10.4116 1.06827C10.5886 0.815665 10.8414 0.626042 11.1335 0.526954C11.4255 0.427866 11.7415 0.424475 12.0356 0.517274V0.515824Z" fill="#F2C94C"/>
         </svg>
     </button>
     <section class="w-full h-auto">
@@ -36,11 +47,11 @@
                 <div class="w-full h-full flex flex-col items-center py-4  space-y-96 mt-16 absolute lg:items-start lg:space-y-6 lg:w-96 lg:h-auto lg:p-3 lg:border-2 lg:border-green_blue lg:rounded-md lg:box-content lg:ml-6 lg:mt-80">
                     <div class="text-center w-full lg:hidden">
                         <input class="outline-none p-2 rounded-full text-center shadow-lg transition duration-300 
-                        focus-within:shadow-sm focus:ring-2 focus:ring-green_blue focus:w-11/12" type="search" placeholder="    Go anywhere" name="" id="">
+                        focus-within:shadow-sm focus:ring-2 focus:ring-green_blue focus:w-11/12 dark:ring-gray_900" type="search" placeholder="    Go anywhere" name="" id="">
                     </div>
                     <p class="max-lg:hidden lg:text-4xl lg:font-bold lg:text-green_blue ">Explore the world with us</p>
                     <button class="bg-white text-lg text-green_blue w-48 p-3 rounded-full text-center font-semibold 
-                    shadow-sm transition durantion-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-green_blue hover:text-white lg:bg-green_blue lg:bg-opacity-90 lg:text-white">
+                    shadow-sm transition durantion-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-green_blue hover:text-white lg:bg-green_blue lg:bg-opacity-90 lg:text-white  dark:max-lg:text-gray_900 dark:max-lg:hover:bg-gray_900 dark:max-lg:hover:text-white">
                         Explore more
                     </button>
                 </div>
@@ -51,53 +62,53 @@
             </div>
         </div>
         <div class="p-6 mt-12" id="recommended">
-                <p class="text-3xl font-semibold text-green_blue">Recommendations</p>
+                <p class="text-3xl font-semibold text-green_blue dark:text-white">Recommendations</p>
                 <div class="mt-6 w-auto h-72 flex items-center space-x-6 overflow-x-auto overscroll-x-contain overflow-y-hidden ">
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover bg-no-repeat"></div>
-                        <div class="bg-gray_900 w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">Norway</p>
                             <p class="text-md mt-1">Beautiful landscapes</p>
                         </div>
                     </div>
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-newyork bg-cover bg-no-repeat"></div>
-                        <div class="bg-azul w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">New york</p>
                             <p class="text-md mt-1">City never sleeps</p>
                         </div>
                     </div>
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-miami bg-cover bg-no-repeat"></div>
-                        <div class="bg-gray_900 w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">Miami</p>
                             <p class="text-md mt-1">Welcome to sunny moments</p>
                         </div>
                     </div>
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-bali bg-cover bg-no-repeat"></div>
-                        <div class="bg-azul w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">Bali</p>
                             <p class="text-md mt-1">A magical island</p>
                         </div>
                     </div>
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-seattle bg-cover bg-no-repeat"></div>
-                        <div class="bg-gray_900 w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">Seattle</p>
                             <p class="text-md mt-1">Welcome to Seattle</p>
                         </div>
                     </div>
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-iceland bg-cover bg-no-repeat"></div>
-                        <div class="bg-azul w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">Iceland</p>
                             <p class="text-md mt-1">A frozen world</p>
                         </div>
                     </div>
                     <div class="Card">
                         <div class="w-full h-3/5 rounded-t-lg bg-switzerland bg-cover bg-no-repeat"></div>
-                        <div class="bg-gray_900 w-ful h-2/5 rounded-b-lg text-white p-3">
+                        <div class="Card_below_section">
                             <p class="text-xl font-bold">Switzerland</p>
                             <p class="text-md mt-1">An outstanding destination</p>
                         </div>
@@ -106,7 +117,7 @@
             </div>
             </div>
         <div class="px-6 pb-6 mt-12 w-full h-auto" id="trending_stays">
-            <p class="text-3xl mb-6 font-semibold text-green_blue">Trending Stays</p>
+            <p class="text-3xl mb-6 font-semibold text-green_blue dark:text-white">Trending Stays</p>
             <div class="grid grid-cols-1 grid-rows-1 gap-y-10  lg:grid-cols-5 lg:grid-rows-3 lg:gap-4 lg:grid-flow-col">
                 <div class="w-full h-96 bg-chicago bg-center bg-cover pt-3 bg-no-repeat rounded-xl lg:col-span-full lg:row-span-1 lg:flex lg:items-start lg:justify-center">
                     <div class="info_card ">
@@ -135,32 +146,32 @@
             </div>
         </div>
         <div class="w-full h-auto px-6 mt-12 pb-12" id="faq">
-            <p class="text-3xl mb-6 font-semibold text-green_blue">FAQs</p>
+            <p class="text-3xl mb-6 font-semibold text-green_blue dark:text-white">FAQs</p>
             <div class="flex flex-col items-center justify-center gap-y-3">
                 <div>
-                    <p class="text-xl font-medium text-green_blue">Payment Methods</p>
-                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                    <p class="text-xl font-medium text-green_blue dark:text-white">Payment Methods</p>
+                    <p class="text-md mt-2 text-black dark:text-gray_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-green_blue">Cancellation policy</p>
-                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                    <p class="text-xl font-medium text-green_blue dark:text-white">Cancellation policy</p>
+                    <p class="text-md mt-2 text-black dark:text-gray_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-green_blue">Long Stays</p>
-                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                    <p class="text-xl font-medium text-green_blue dark:text-white">Long Stays</p>
+                    <p class="text-md mt-2 text-black dark:text-gray_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-green_blue">Guarantee information</p>
-                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                    <p class="text-xl font-medium text-green_blue dark:text-white">Guarantee information</p>
+                    <p class="text-md mt-2 text-black dark:text-gray_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
                 </div>
                 <div>
-                    <p class="text-xl font-medium text-green_blue">Additional Services</p>
-                    <p class="text-md mt-2 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
+                    <p class="text-xl font-medium text-green_blue dark:text-white">Additional Services</p>
+                    <p class="text-md mt-2 text-black dark:text-gray_300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse perspiciatis tempore adipisci eaque quo.</p>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-8 pb-8 lg:pt-4 lg:pb-4" id="about">
+    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-8 pb-8 lg:pt-4 lg:pb-4 dark:bg-gray_700" id="about">
         <div class="space-y-3">
             <p class="text-lg font-semibold">About us</p>
             <p class="text-sm">Jobs</p>
@@ -175,7 +186,7 @@
             <img src="./svg/instagram 1.png" alt="instagram">
         </div>
     </footer>
-    <div class="w-full h-16 bg-green_blue border-t flex justify-center items-center gap-x-9 fixed left-0 bottom-0 lg:hidden" id="tab_bar">
+    <div class="w-full h-16 bg-green_blue border-t flex justify-center items-center gap-x-9 fixed left-0 bottom-0 lg:hidden dark:bg-gray_900 dark:border-gray_300" id="tab_bar">
         <a href="#home">
             <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="icon-animation" d="M15.0159 1.0385C14.7669 0.754637 14.4034 0.588779 14.0189 0.583504C13.6344 0.578228 13.2662 0.734049 13.009 1.01096L1.00896 13.9276C0.656721 14.3068 0.567802 14.8512 0.782022 15.3172C0.996242 15.7832 1.47347 16.0834 2.00002 16.0834H4.66669V23.8334C4.66669 24.5467 5.26364 25.125 6.00002 25.125H11.3334V18.6667H16.6667V25.125H22C22.7364 25.125 23.3334 24.5467 23.3334 23.8334V16.0834H25.3334C25.8531 16.0834 26.3254 15.7908 26.5436 15.3339C26.7617 14.8769 26.6859 14.3388 26.3493 13.9552L15.0159 1.0385Z" fill="#F2F2F2"/>
@@ -188,18 +199,29 @@
                 
         </a>
         <a href="#recommended">
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="31" height="31" fill="#336965"/>
-                <path class="icon-animation" d="M8.88589 5.15968C11.6963 4.45691 13.5415 5.33621 14.6651 6.45976C14.7875 6.58214 14.9006 6.70668 15.0051 6.83141C15.1278 6.9779 15.3091 7.06253 15.5002 7.06253C15.6913 7.06253 15.8726 6.9779 15.9953 6.8314C16.0998 6.70667 16.2129 6.58213 16.3353 6.45976C17.4589 5.33617 19.3043 4.45693 22.1153 5.15967C24.9229 5.8616 27.0419 7.97272 27.7491 10.625C28.461 13.2952 27.7249 16.4329 24.9982 19.1596C21.9813 22.1765 19.4061 24.753 17.7854 26.3747C16.5244 27.6365 14.4827 27.6371 13.2211 26.3757L6.00388 19.1596C3.27608 16.4322 2.53997 13.2945 3.25217 10.6244C3.9596 7.97228 6.07894 5.8616 8.88589 5.15968Z" fill="#F2F2F2"/>
+            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="icon-animation" d="M6.88589 1.15968C9.69627 0.45691 11.5415 1.33621 12.6651 2.45976C12.7875 2.58214 12.9006 2.70668 13.0051 2.83141C13.1278 2.9779 13.3091 3.06253 13.5002 3.06253C13.6913 3.06253 13.8726 2.9779 13.9953 2.8314C14.0998 2.70667 14.2129 2.58213 14.3353 2.45976C15.4589 1.33617 17.3043 0.456931 20.1153 1.15967C22.9229 1.8616 25.0419 3.97272 25.7491 6.62505C26.461 9.29516 25.7249 12.4329 22.9982 15.1596C19.9813 18.1765 17.4061 20.753 15.7854 22.3747C14.5244 23.6365 12.4827 23.6371 11.2211 22.3757L4.00388 15.1596C1.27608 12.4322 0.539973 9.29447 1.25217 6.62445C1.9596 3.97228 4.07894 1.8616 6.88589 1.15968Z" fill="#F2F2F2"/>
             </svg>
         </a>
         <a href="#!">
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="31" height="31" fill="#336965"/>
-                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M5.78225 19.6464C7.4799 17.2799 10.4865 15.4999 15.4999 15.4999C20.5132 15.4999 23.5199 17.2799 25.2175 19.6464C26.8582 21.9336 27.1196 24.5552 27.1248 26.0058C27.13 27.4645 25.9071 28.4166 24.6533 28.4166H6.34642C5.09262 28.4166 3.86971 27.4645 3.87496 26.0058C3.88017 24.5552 4.1415 21.9336 5.78225 19.6464Z" fill="#F2F2F2"/>
-                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12.9166C18.3535 12.9166 20.6667 10.6034 20.6667 7.74992C20.6667 4.89645 18.3535 2.58325 15.5 2.58325C12.6465 2.58325 10.3333 4.89645 10.3333 7.74992C10.3333 10.6034 12.6465 12.9166 15.5 12.9166Z" fill="#F2F2F2"/>
+            <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M2.78225 17.6465C4.4799 15.28 7.48651 13.5 12.4999 13.5C17.5132 13.5 20.5199 15.28 22.2175 17.6465C23.8582 19.9337 24.1196 22.5553 24.1248 24.0059C24.13 25.4646 22.9071 26.4167 21.6533 26.4167H3.34642C2.09262 26.4167 0.869709 25.4646 0.874956 24.0059C0.880174 22.5553 1.1415 19.9337 2.78225 17.6465Z" fill="#F2F2F2"/>
+                <path class="icon-animation" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 10.9167C15.3535 10.9167 17.6667 8.60351 17.6667 5.75004C17.6667 2.89657 15.3535 0.583374 12.5 0.583374C9.64653 0.583374 7.33334 2.89657 7.33334 5.75004C7.33334 8.60351 9.64653 10.9167 12.5 10.9167Z" fill="#F2F2F2"/>
             </svg>
         </a>
     </div>
+    <script>
+        const htmlElement = document.querySelector("html");
+        const darkSm = document.getElementById("dark-sm");
+        const darkDesktop = document.getElementById("dark-desktop");
+
+        const toggleFunction = () =>{
+            htmlElement.classList.toggle("dark");
+        }
+
+        darkSm.addEventListener("click",toggleFunction);
+        darkDesktop.addEventListener("click",toggleFunction);
+
+    </script>
 </body>
 </html>

@@ -7,10 +7,22 @@
     @apply w-48 h-64 shadow-md rounded-lg flex-none transition hover:-translate-y-4 hover:shadow-xl ease-in-out; 
 }
 
+.Card:nth-child(odd){
+    @apply bg-gray_900 dark:bg-green_600;
+}
+
+.Card:nth-child(even){
+    @apply bg-azul dark:bg-green_blue;
+}
+
+.Card_below_section{
+    @apply w-full h-2/5 rounded-b-lg text-white p-3;
+}
+
 .info_card{
-    @apply w-52 h-auto mx-20 mt-4 p-3  bg-white text-left text-gray_900;
+    @apply w-52 h-auto mx-20 mt-4 p-3  bg-white text-left text-gray_900 dark:bg-gray_700 dark:text-white;
 }
 
 .icon-animation{
-    @apply transition hover:fill-current hover:text-gray_700 duration-300 ease-in-out;
+    @apply transition hover:fill-current hover:text-gray_700 duration-300 ease-in-out; 
 }

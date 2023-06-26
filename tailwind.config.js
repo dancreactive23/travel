@@ -3,6 +3,7 @@ import colors from 'tailwindcss/colors';
 
 module.exports = {
   content: ["./public/index.html","./src/**/*.{html,js}"],
+  darkMode:"class",
   theme: {
     colors:{
       ...colors,
