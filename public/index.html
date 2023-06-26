@@ -10,7 +10,21 @@
     <title>Document</title>
 </head>
 <body class="font-Montserrat">
-    <nav></nav>
+    <nav class="w-full h-16 hidden bg-white lg:flex lg:justify-between lg:items-center lg:px-6 lg:fixed lg:border-b lg:border-gray_300 lg:drop-shadow-md lg:z-10">
+        <div class="w-auto h-auto text-center">
+            <a href="#home"><p class="text-xl font-black text-green_blue">Travel the World</p></a>
+        </div>
+        <div class="flex  h-auto justify-center space-x-12">
+            <a href="#recommended" class="text-lg font-bold text-green_blue">Locations</a>
+            <a href="#trending_stays" class="text-lg font-bold text-green_blue">Stays</a>
+            <a href="#faq" class="text-lg font-bold text-green_blue">FAQs</a>
+            <a href="#about" class="text-lg font-bold text-green_blue">About us</a>
+        </div>
+        <div class="flex w-auto h-auto space-x-7">
+            <img src="./svg/search_icon.svg" alt="search">
+            <img src="./svg/moon.svg" alt="moon">
+            <img src="./svg/us.svg" alt="user">
+    </nav>
     <button class="fixed right-5 top-7 w-14 h-8 bg-white drop-shadow-md flex justify-center items-center rounded-3xl lg:hidden">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96175 11.5827 7.48895 10.8106 6.33919 9.66085C5.18944 8.5111 4.41734 7.0383 4.12574 5.43866C3.83415 3.83903 4.03691 2.18852 4.70701 0.707031C3.52758 1.24004 2.49505 2.05123 1.69802 3.07099C0.900987 4.09075 0.363244 5.28865 0.130924 6.56192C-0.101395 7.83518 -0.0213565 9.1458 0.364174 10.3813C0.749705 11.6169 1.42922 12.7404 2.34442 13.6556C3.25961 14.5708 4.38318 15.2503 5.61871 15.6359C6.85424 16.0214 8.16486 16.1014 9.43813 15.8691C10.7114 15.6368 11.9093 15.0991 12.9291 14.302C13.9488 13.505 14.76 12.4725 15.293 11.293Z" fill="#336965"/>
@@ -146,7 +160,7 @@
             </div>
         </div>
     </section>
-    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-8 pb-8 lg:pt-4 lg:pb-4">
+    <footer class="w-full h-auto bg-green_blue text-gray_300 px-28 pt-8 pb-8 lg:pt-4 lg:pb-4" id="about">
         <div class="space-y-3">
             <p class="text-lg font-semibold">About us</p>
             <p class="text-sm">Jobs</p>
