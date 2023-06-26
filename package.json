@@ -2,7 +2,7 @@
   "name": "travel-world",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./public/index.html",
   "scripts": {
     "tw:dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
     "tw:build":"npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --minify"
