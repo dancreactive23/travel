@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buildtailwind":"npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
+    "buildtailwind": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "tailwind-scrollbar-hide": "^1.1.7"
   }
 }
