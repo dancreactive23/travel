@@ -6,15 +6,13 @@
   "main": "./public/index.html",
   "scripts": {
     "tw:dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
-    "tw:build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --minify",
-    "deploy":"gh-pages -d build"
+    "tw:build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --minify"
   },
   "keywords": [],
   "author": "Danilo G @Dancreactive23",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
   },
